@@ -3915,7 +3915,7 @@
 				)
 			)
 		)
-		(property "Sim.Library" "/home/joaocosta/Documents/kicad/ps_temp_control_simulator/lib/L7805/Regulador_Sim.lib"
+		(property "Sim.Library" "${KIPRJMOD}/../lib/L7805/Regulador_Sim.lib"
 			(at 67.31 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -4490,7 +4490,7 @@
 				)
 			)
 		)
-		(property "Sim.Library" "/home/joaocosta/Documents/kicad/ps_temp_control_simulator/lib/Thermistor/Termistor_Sim.lib"
+		(property "Sim.Library" "${KIPRJMOD}/../lib/Thermistor/Termistor_Sim.lib"
 			(at 100.33 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -4833,7 +4833,7 @@
 				)
 			)
 		)
-		(property "Sim.Library" "/home/joaocosta/Documents/kicad/ps_temp_control_simulator/lib/Fuse/Fusivel_Sim.lib"
+		(property "Sim.Library" "${KIPRJMOD}/../lib/Fuse/Fusivel_Sim.lib"
 			(at 30.48 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -5382,7 +5382,7 @@
 				)
 			)
 		)
-		(property "Sim.Library" "/home/joaocosta/Documents/kicad/ps_temp_control_simulator/lib/LM393_SIM/Comparador_Sim.lib"
+		(property "Sim.Library" "${KIPRJMOD}/../lib/LM393_SIM/Comparador_Sim.lib"
 			(at 158.75 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -5604,7 +5604,7 @@
 				)
 			)
 		)
-		(property "Sim.Library" "/home/joaocosta/Documents/kicad/ps_temp_control_simulator/lib/LM393_SIM/Comparador_Sim.lib"
+		(property "Sim.Library" "${KIPRJMOD}/../lib/LM393_SIM/Comparador_Sim.lib"
 			(at 196.85 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -5751,7 +5751,7 @@
 				)
 			)
 		)
-		(property "Sim.Library" "/home/joaocosta/Documents/kicad/ps_temp_control_simulator/lib/TIP122/Transistor_Sim.lib"
+		(property "Sim.Library" "${KIPRJMOD}/../lib/TIP122/Transistor_Sim.lib"
 			(at 243.84 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -6483,7 +6483,7 @@
 				)
 			)
 		)
-		(property "Sim.Library" "/home/joaocosta/Documents/kicad/ps_temp_control_simulator/lib/LM393_SIM/Comparador_Sim.lib"
+		(property "Sim.Library" "${KIPRJMOD}/../lib/LM393_SIM/Comparador_Sim.lib"
 			(at 196.85 88.9 0)
 			(hide yes)
 			(show_name no)

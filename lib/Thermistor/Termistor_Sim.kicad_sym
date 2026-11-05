@@ -8,7 +8,7 @@
 		(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "NTC 10k (B=3950) - segue TEMP da simulacao" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Device" "SUBCKT" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-		(property "Sim.Library" "${KIPRJMOD}/Termistor_Sim.lib" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Sim.Library" "${KIPRJMOD}/../lib/Thermistor/Termistor_Sim.lib" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Name" "MF58_10K" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Pins" "1=A 2=B" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(symbol "MF58_10K_0_1"
@@ -29,7 +29,7 @@
 		(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "NTC 10k (B=3950) - temperatura fixa via parametro TC" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Device" "SUBCKT" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-		(property "Sim.Library" "${KIPRJMOD}/Termistor_Sim.lib" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Sim.Library" "${KIPRJMOD}/../lib/Thermistor/Termistor_Sim.lib" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Name" "MF58_10K_TC" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Pins" "1=A 2=B" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(symbol "MF58_10K_TC_0_1"

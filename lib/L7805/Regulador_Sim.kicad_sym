@@ -8,7 +8,7 @@
 		(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "Regulador 5V 1.5A com modelo SPICE" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Device" "SUBCKT" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-		(property "Sim.Library" "${KIPRJMOD}/Regulador_Sim.lib" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Sim.Library" "${KIPRJMOD}/../lib/L7805/Regulador_Sim.lib" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Name" "L7805_SIM" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Pins" "1=IN 2=GND 3=OUT" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(symbol "L7805_SIM_0_1"
@@ -29,7 +29,7 @@
 		(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "Regulador 12V 1.5A com modelo SPICE" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Device" "SUBCKT" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-		(property "Sim.Library" "${KIPRJMOD}/Regulador_Sim.lib" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Sim.Library" "${KIPRJMOD}/../lib/L7805/Regulador_Sim.lib" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Name" "L7812_SIM" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Pins" "1=IN 2=GND 3=OUT" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(symbol "L7812_SIM_0_1"
@@ -50,7 +50,7 @@
 		(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "LDO 3.3V 1A com modelo SPICE" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Device" "SUBCKT" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-		(property "Sim.Library" "${KIPRJMOD}/Regulador_Sim.lib" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Sim.Library" "${KIPRJMOD}/../lib/L7805/Regulador_Sim.lib" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Name" "AMS1117_33_SIM" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Sim.Pins" "1=IN 2=GND 3=OUT" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
 		(symbol "AMS1117_33_SIM_0_1"

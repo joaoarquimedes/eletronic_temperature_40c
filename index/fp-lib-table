@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "C351428") (type "KiCad") (uri "${KIPRJMOD}/../lib/LM393_SIM/C351428.pretty") (options "") (descr "SOP-8 do LM393 (LCSC C351428)"))
+)

@@ -1,1 +1,25 @@
+# Histórico local e backups do KiCad
 index/.history/
+*-backups/
+_autosave-*
+*.bak
+*-bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+
+# Travas e caches
+*.lck
+fp-info-cache
+
+# Preferências locais de visualização (por usuário)
+*.kicad_prl
+
+# Saídas do ngspice
+*.raw
+*.log
+*.out
+
+# Arquivos de fabricação gerados
+production/
+gerber/
+*.zip
