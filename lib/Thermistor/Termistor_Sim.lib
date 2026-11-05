@@ -1,0 +1,16 @@
+* Termistor_Sim.lib - NTC MF58 10k (ngspice / KiCad)
+* Equacao Beta: R(T) = R25 * exp( B * (1/T - 1/298.15) ), T em kelvin
+* B = 3950 K e valor TIPICO do MF58 10k - confira no anuncio/datasheet da sua sonda.
+* Nao modela autoaquecimento nem constante de tempo termica.
+
+* Versao 1: segue a temperatura da simulacao (use .dc TEMP ... ou .op TEMP)
+* Atencao: a temperatura global tambem altera os outros componentes (transistores, diodos).
+.subckt MF58_10K A B params: R25=10k BETA=3950
+R1 A B r = { R25 * exp( BETA * ( 1/(temper + 273.15) - 1/298.15 ) ) }
+.ends MF58_10K
+
+* Versao 2: temperatura fixa do sensor definida por TC (graus C), independente do resto
+* do circuito. Use com .param / .step param para varrer so o sensor.
+.subckt MF58_10K_TC A B params: R25=10k BETA=3950 TC=25
+R1 A B r = { R25 * exp( BETA * ( 1/(TC + 273.15) - 1/298.15 ) ) }
+.ends MF58_10K_TC

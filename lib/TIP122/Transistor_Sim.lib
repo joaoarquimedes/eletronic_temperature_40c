@@ -1,0 +1,19 @@
+* Transistor_Sim.lib - modelo do Darlington TIP122 (ngspice / KiCad)
+* Pinos na ORDEM do simbolo Transistor_BJT:TIP122: 1=B (base)  2=C (coletor)  3=E (emissor)
+* Estrutura interna: driver + transistor de saida, resistores base-emissor de 8k e 120 ohm,
+* diodo de roda livre coletor-emissor (emissor -> coletor).
+* Parametros ajustados para: hFE alto em baixa corrente (>1000), VBE(on) ~1,2-1,5 V a 0,25 A,
+* VCE(sat) ~0,8-1,0 V a 0,25 A com base bem alimentada. Valores TIPICOS, nao medidos.
+* Nao modela: temperatura, dissipacao, tempos de chaveamento (so capacitancias basicas).
+
+.model TIP122_QD NPN (IS=2e-13 BF=120 NF=1 VAF=100 IKF=0.5 RB=5 RC=0.5 RE=0.2 CJE=60p CJC=30p TF=20n)
+.model TIP122_QO NPN (IS=5e-12 BF=100 NF=1 VAF=100 IKF=5 RB=1 RC=0.05 RE=0.02 CJE=300p CJC=100p TF=50n)
+.model TIP122_DCE D (IS=1e-10 N=1.3 RS=0.04 BV=100 IBV=1m CJO=200p TT=1u)
+
+.subckt TIP122_SIM B C E
+Qd C B nb TIP122_QD
+Qo C nb E TIP122_QO
+R2 nb E 120
+R1 B nb 8k
+Dce E C TIP122_DCE
+.ends TIP122_SIM

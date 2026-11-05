@@ -1,0 +1,23 @@
+* Comparador_Sim.lib - modelo comportamental do LM393 (ngspice / KiCad)
+* Pinos na ORDEM DO DIP-8, igual ao simbolo Comparator:LM393:
+*   1=OUT1  2=IN1-  3=IN1+  4=GND  5=IN2+  6=IN2-  7=OUT2  8=VCC
+* Saida em coletor aberto: se V(IN+) > V(IN-) a saida fica solta (alta via pull-up);
+* se V(IN+) < V(IN-) a saida e puxada para GND (resistencia de saturacao RON).
+* Nao modela: atraso de propagacao, faixa de modo comum, saturacao de corrente de saida.
+
+.subckt LM393_SIM OUT1 IN1M IN1P GND IN2P IN2M OUT2 VCC params: VOS=2m VW=0.5m RON=60 ICC=0.4m IB=25n
+* corrente de alimentacao do encapsulamento
+Bcc VCC GND I = { ICC }
+* ---- comparador 1 ----
+Rin1p IN1P GND 1G
+Rin1m IN1M GND 1G
+Bib1p GND IN1P I = { IB }
+Bib1m GND IN1M I = { IB }
+Bo1 OUT1 GND I = { V(OUT1,GND) / RON * 0.5 * (1 - tanh((V(IN1P,IN1M) - VOS)/VW)) }
+* ---- comparador 2 ----
+Rin2p IN2P GND 1G
+Rin2m IN2M GND 1G
+Bib2p GND IN2P I = { IB }
+Bib2m GND IN2M I = { IB }
+Bo2 OUT2 GND I = { V(OUT2,GND) / RON * 0.5 * (1 - tanh((V(IN2P,IN2M) - VOS)/VW)) }
+.ends LM393_SIM

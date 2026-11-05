@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "L7805_SIM") (type "KiCad") (uri "/home/joaocosta/Documents/kicad/ps_temp_control_simulator/lib/L7805/Regulador_Sim.kicad_sym") (options "") (descr ""))
+)

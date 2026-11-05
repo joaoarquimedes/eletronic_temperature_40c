@@ -1,0 +1,9 @@
+* Teste: divisor 5 V - 10k - NTC, varrendo a temperatura do sensor
+.include Termistor_Sim.lib
+.param Tsensor=25
+V1 vcc 0 5
+R1 vcc mid 10k
+XRT mid 0 MF58_10K_TC params: TC={Tsensor}
+.step param Tsensor list 0 25 40 60 80
+.op
+.end

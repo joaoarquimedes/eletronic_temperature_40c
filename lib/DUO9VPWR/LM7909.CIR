@@ -1,0 +1,108 @@
+* LM7909
+*
+* SPICE (Simulation Program with Integrated Circuit Emphasis)
+* SUBCIRCUIT
+*
+* Connections:  Gnd
+*                |    In
+*                |    |   Out
+*                |    |    |
+.SUBCKT LM7909   2    1    3
+RBIAS         55  3    220
+RADJ          2   55   1465
+D6            14  15   D_6V3_0
+D5             3  17   D_1
+D4             3  19   D_1
+D3            12  13   D_0
+D2            16   3   D_6V3_1
+D1             3  18   D_2
+QTU37         20  22  21   Q_PNP_1 1.000
+QTU36         21  27  26   Q_PNP_1 1.000
+QTU35          1  25   7   Q_PNP_0 1.000
+QTU34         30   3  13   Q_PNP_2 0.090
+QTU33          4   5   3   Q_PNP_0 1.000
+QTU32          6   5   3   Q_PNP_0 1.000
+QTU31          7   5   3   Q_PNP_0 1.000
+QTU30         28   5   3   Q_PNP_0 1.000
+QTU29          5  11   3   Q_PNP_0 1.000
+QTU28         29  11   3   Q_PNP_0 1.000
+QTU27         31   8  32   Q_PNP_0 1.000
+QTU26          8   8  32   Q_PNP_0 1.000
+QTU25          8   8   9   Q_PNP_0 1.000
+QTU24         10   8   9   Q_PNP_0 1.000
+QTU23          3  47  27   Q_NPN_0 1.000
+QTU22          3  45  44   Q_NPN_1 10.00
+QTU21          3  46  45   Q_NPN_2 3.000
+QTU20         33  34  35   Q_NPN_0 1.000
+QTU19         33  34  14   Q_NPN_0 1.000
+QTU17         27  37  20   Q_NPN_0 1.000
+QTU16         22  36   1   Q_NPN_0 1.000
+QTU15         21  37  38   Q_NPN_0 1.000
+QTU14          8  37  39   Q_NPN_0 1.000
+QTU13         17  37  40   Q_NPN_0 1.000
+QTU12         30  31  17   Q_NPN_0 1.000
+QTU11         31  10  17   Q_NPN_0 1.000
+QTU10         10  10  17   Q_NPN_0 1.000
+QTU9          21   4   1   Q_NPN_0 1.000
+QTU8           4   6   1   Q_NPN_0 1.000
+QTU7           6  23   1   Q_NPN_0 1.000
+QTU6          24  25  41   Q_NPN_0 1.000
+QTU5          25  42   1   Q_NPN_0 1.000
+QTU4          29  42  43   Q_NPN_0 1.000
+QTU3           5  28  29   Q_NPN_0 1.000
+QTU2          19  48  32   Q_NPN_0 1.000
+QTU1          19  49   9   Q_NPN_0 1.000
+R37          36  33  15K
+R36          16  15  18K
+R35          15  14  100K
+R34          35  50  10
+R33          14  35  150
+R32          51  34  12K
+C5           33  34  2P
+R31          51  33  390
+R30          21  51  12K
+C4           22  36  5P
+R29          21  22  6.8K
+R28          20   1  500
+R27          40  39  6K
+R26          38   1  2.4K
+R25          40   1  500
+R24          50   1  40M
+R23           4  52  20K
+R22          52   1  4K
+R21          23  52  8K
+R20          41   1  4.2K
+R19           7  24  12K
+R18          43   1  600
+R17          42  25  270
+R16          37  42  1K
+R15          28  37  4K
+R14          11   5  750
+R13           5  18  60K
+R12          18  16  100K
+R11          44  50  200M
+R10          45  44  250
+R9           21  46  100
+R8           31  53  5K
+C3           53  30  15P
+C2           48  30  15P
+R7            3  26  220
+R6           30  47  2K
+R5           54  47  800
+C1            3  54  25P
+R4           55  19  60
+R3           48  12  20K
+R2           19  48  2K
+R1           19  49  2K
+.MODEL D_6V3_0 D(IS=10F N=1.04 BV=6.3 IBV=1M CJO=1P TT=10p)
+.MODEL D_6V3_1 D(IS=10F N=1.04 BV=6.3 IBV=1M CJO=1P TT=10p)
+.MODEL D_0 D(IS=1F N=1.14 CJO=1P TT=10p)
+.MODEL D_1 D(IS=1F N=1.16 CJO=1P TT=10p)
+.MODEL D_2 D(IS=1F N=1.16 CJO=1P TT=10p)
+.MODEL Q_PNP_0 PNP(IS=10F NF=1.04 NR=1.04 BF=100 CJC=1P CJE=2P TF=10P TR=1N VAF=45)
+.MODEL Q_PNP_1 PNP(IS=10F NF=1.04 NR=1.04 BF=100 CJC=1P CJE=2P TF=10P TR=1N VAF=45)
+.MODEL Q_PNP_2 PNP(IS=10F NF=1.14 NR=1.14 BF=100 CJC=1P CJE=2P TF=10P TR=1N VAF=45)
+.MODEL Q_NPN_0 NPN(IS=10F NF=1.04 NR=1.04 BF=100 CJC=1P CJE=2P TF=10P TR=1N VAF=90)
+.MODEL Q_NPN_1 NPN(IS=10F NF=1.04 NR=1.04 BF=100 CJC=1P CJE=2P TF=10P TR=1N VAF=90)
+.MODEL Q_NPN_2 NPN(IS=10F NF=1.04 NR=1.04 BF=100 CJC=1P CJE=2P TF=10P TR=1N VAF=90)
+.ENDS

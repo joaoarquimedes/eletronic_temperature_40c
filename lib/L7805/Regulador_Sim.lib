@@ -1,0 +1,29 @@
+* Regulador_Sim.lib - modelos comportamentais de reguladores lineares (ngspice / KiCad)
+* Pinos: IN GND OUT
+* Modelo simplificado: dropout, regulacao de linha (rejeicao), resistencia de saida
+* (regulacao de carga), limite de corrente (foldback) e corrente quiescente.
+* NAO modela: ripple em alta frequencia, transientes de carga, temperatura, protecao termica.
+
+.subckt REG_LIN IN GND OUT params: VOUT=5 VDO=2 ROUT=0.05 ILIM=1.5 IQ=5m KLINE=5e-4
+Vs nint OUT 0
+* tensao alvo: satura em VOUT; abaixo do dropout acompanha (VIN - VDO)
+Bo nint GND V = { (V(IN,GND) - VDO) < VOUT ? max(V(IN,GND) - VDO, 0) : (VOUT + KLINE*(V(IN,GND) - VOUT - VDO)) } - ROUT*I(Vs) - ( I(Vs) > ILIM ? 20*(I(Vs) - ILIM) : 0 )
+* corrente consumida da entrada = corrente de carga + quiescente
+Bin IN GND I = { I(Vs) + IQ }
+Rleak OUT GND 1Meg
+.ends REG_LIN
+
+* LM7805 / L7805CV: 5 V, 1,5 A, dropout ~2 V
+.subckt L7805_SIM IN GND OUT
+X1 IN GND OUT REG_LIN params: VOUT=5 VDO=2 ROUT=0.05 ILIM=1.5 IQ=5m KLINE=5e-4
+.ends L7805_SIM
+
+* L7812: 12 V, 1,5 A, dropout ~2 V
+.subckt L7812_SIM IN GND OUT
+X1 IN GND OUT REG_LIN params: VOUT=12 VDO=2 ROUT=0.08 ILIM=1.5 IQ=5m KLINE=5e-4
+.ends L7812_SIM
+
+* AMS1117-3.3: LDO 3,3 V, ~1 A, dropout ~1,1 V
+.subckt AMS1117_33_SIM IN GND OUT
+X1 IN GND OUT REG_LIN params: VOUT=3.3 VDO=1.1 ROUT=0.03 ILIM=1.0 IQ=5m KLINE=1e-3
+.ends AMS1117_33_SIM

@@ -1,0 +1,7 @@
+* Fusivel_Sim.lib - fusivel de 1 A temporizado, modelo simplificado (ngspice / KiCad)
+* Pinos: 1=A  2=B (o fusivel nao tem polaridade)
+* Representa apenas a resistencia a frio (RF = 0,15 ohm). NAO modela a queima do fusivel.
+
+.subckt FUSE_1A_SIM A B params: RF=0.15
+R1 A B {RF}
+.ends FUSE_1A_SIM

@@ -1,0 +1,8 @@
+* Teste: L7805 com Vin 12 V e carga 100 ohm
+.include Regulador_Sim.lib
+V1 in 0 12
+XU1 in 0 out L7805_SIM
+RL out 0 100
+.op
+.dc V1 0 20 0.1
+.end
